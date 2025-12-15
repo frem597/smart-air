@@ -1,0 +1,42 @@
+const db = "https://esp32-a511e-default-rtdb.asia-southeast1.firebasedatabase.app/";
+
+// อ่านค่าอุณหภูมิ
+function loadTemp() {
+  fetch(db + "control/temp.json")
+    .then(res => res.json())
+    .then(temp => {
+      if (temp === null) temp = 25;
+      document.getElementById("tempValue").innerText = temp;
+    });
+}
+
+// เพิ่มอุณหภูมิ
+function tempUp() {
+  fetch(db + "control/temp.json")
+    .then(res => res.json())
+    .then(temp => {
+      temp = (temp ?? 25) + 1;
+      fetch(db + "control/temp.json", {
+        method: "PUT",
+        body: JSON.stringify(temp)
+      });
+      document.getElementById("tempValue").innerText = temp;
+    });
+}
+
+// ลดอุณหภูมิ
+function tempDown() {
+  fetch(db + "control/temp.json")
+    .then(res => res.json())
+    .then(temp => {
+      temp = (temp ?? 25) - 1;
+      fetch(db + "control/temp.json", {
+        method: "PUT",
+        body: JSON.stringify(temp)
+      });
+      document.getElementById("tempValue").innerText = temp;
+    });
+}
+
+// โหลดค่าเมื่อเปิดหน้า
+window.onload = loadTemp;

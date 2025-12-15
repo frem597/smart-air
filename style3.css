@@ -1,0 +1,123 @@
+    * {
+
+        box-sizing: border-box;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+
+        margin-top: 180px;
+        font-family: Arial, sans-serif;
+        background: #0f172a;
+        color: white;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+
+    }
+
+    .card {
+        background: #1e293b;
+        padding: 35px;
+        border-radius: 15px;
+        width: 300px;
+        justify-content: center;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+
+    }
+
+    h1 {
+
+        margin-bottom: 30px;
+        border-radius: 10px;
+        margin-top: -10px;
+        color: #bca9bb;
+    }
+
+    .value {
+        margin-left: -160px;
+    }
+
+    .voltage h2 {
+        margin-left: 50px;
+    }
+
+    .amp h2 {
+        margin-left: 50px;
+    }
+
+    .watt {
+        margin-left: 47px;
+    }
+
+    a:hover {
+        opacity: 0.5;
+    }
+
+    .blog-page {
+        position: relative;
+        top: 20px;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    a {
+        text-decoration: none;
+        color: #406783;
+    }
+
+    .page1 h3 {
+        border: solid 1px #1f4148;
+        border-radius: 1rem;
+        padding: 8px;
+        background-color: #4283a1;
+        background: linear-gradient(135deg, #1e38cc, #4f2b89);
+        box-shadow: 0 8px 20px rgba(14, 165, 233, 0.4);
+        transition: transform 0.15s, opacity 0.15s;
+    }
+
+    .page2 h3 {
+        border: solid 1px #1f4148;
+        border-radius: 1rem;
+        padding: 8px;
+        background-color: #4283a1;
+        background: linear-gradient(135deg, #1e38cc, #4f2b89);
+        box-shadow: 0 8px 20px rgba(14, 165, 233, 0.4);
+        transition: transform 0.15s, opacity 0.15s;
+    }
+
+    .TEMP {
+        color: #1d9be9;
+        margin-left: 30px;
+    }
+
+    .voltage {
+        color: #e61212;
+    }
+
+    .amp {
+        color: #e08c16;
+    }
+
+    .watt {
+        color: #edde15;
+    }
+
+    .page1 a {
+        color: #181811;
+    }
+
+    .page2 a {
+        color: #161610;
+    }
+
+    .page1:hover,
+    .page2:hover {
+        transform: translateY(-2px)
+    }
+
+    .page1,
+    .page2 {
+        transition: transform 0.15s, opacity 0.15s;
+    }
