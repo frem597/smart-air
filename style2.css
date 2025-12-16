@@ -68,20 +68,36 @@ button {
     border: none;
     cursor: pointer;
     transition: 0.2s;
+
 }
 
 /* ❌ ไม่ใช้ position / top อีกแล้ว */
 
 .up {
+      display: inline-block;   /* สำคัญ */
+    width: auto;             /* ไม่ให้ยืด */
+    align-self: center;      /* จัดกึ่งกลาง */
+    
+    padding: 50px 260px;      /* คุมความกว้างด้วย padding */
+    font-size: 5rem;
+    border-radius: 100px;
     background: linear-gradient(135deg, #6d3535, #dc2626);
     color: rgb(50, 37, 37);
     box-shadow: 0 6px 15px rgba(239, 68, 68, 0.4);
 }
 
 .down {
+      display: inline-block;   /* สำคัญ */
+    width: auto;             /* ไม่ให้ยืด */
+    align-self: center;      /* จัดกึ่งกลาง */
+    
+    padding: 50px 170px;      /* คุมความกว้างด้วย padding */
+    font-size: 5rem;
+    border-radius: 100px;
     background: linear-gradient(135deg, #4283a1, #1f4148);
     color: rgb(10, 21, 70);
     box-shadow: 0 5px 15px #0d697b;
+   
 }
 
 button:hover {
@@ -91,6 +107,7 @@ button:hover {
 
 /* ===== FOOTER MENU ===== */
 .blog-page {
+  margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
     margin-top: auto;     /* ✔ ดันไปล่างสุด */
