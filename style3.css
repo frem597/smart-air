@@ -5,13 +5,15 @@
     padding: 0;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     width: 100%;
     background: #0f172a;
     display: flex;
     justify-content: center;
-    align-items: flex-start;   /* 🔴 เปลี่ยนจาก center */
+    align-items: flex-start;
+    /* 🔴 เปลี่ยนจาก center */
     text-align: center;
     color: white;
 }
@@ -20,12 +22,16 @@ html, body {
 .card {
     background: #1e293b;
     padding: 20px;
-    border-radius: 0;          /* 🔴 เต็มจอ ไม่โค้ง */
-    width: 100vw;              /* 🔴 เต็มความกว้าง */
-    height: 100vh;             /* 🔴 เต็มความสูง */
+    border-radius: 0;
+    /* 🔴 เต็มจอ ไม่โค้ง */
+    width: 100vw;
+    /* 🔴 เต็มความกว้าง */
+    height: 100vh;
+    /* 🔴 เต็มความสูง */
     display: flex;
     flex-direction: column;
-    box-shadow: none;          /* 🔴 เหมือนแอป */
+    box-shadow: none;
+    /* 🔴 เหมือนแอป */
 }
 
 /* ===== TITLE ===== */
@@ -38,7 +44,7 @@ h1 {
 
 /* ===== CONTENT ===== */
 .value {
-    
+
     margin-top: 100px;
     display: flex;
     flex-direction: column;
@@ -52,23 +58,37 @@ h1 {
     font-size: 80px;
 }
 
-.voltage { color: #e61212; font-size: 80px;
-margin-left: 30px; }
-.amp     { color: #e08c16; font-size: 80px; 
-margin-left: 30px;}
-.watt    { color: #edde15; font-size: 80px; 
-margin-left: 10px}
+.voltage {
+    color: #e61212;
+    font-size: 80px;
+    margin-left: 30px;
+}
+
+.amp {
+    color: #e08c16;
+    font-size: 80px;
+    margin-left: 30px;
+}
+
+.watt {
+    color: #edde15;
+    font-size: 80px;
+    margin-left: 10px
+}
 
 /* ===== FOOTER ===== */
 .blog-page {
     padding: 50px;
     display: flex;
     justify-content: space-between;
-    margin-top: auto;          /* 🔴 ดันลงล่างสุด */
+    margin-top: auto;
+    /* 🔴 ดันลงล่างสุด */
     padding-bottom: 50px;
 }
 
-.page1 h3, .page2 h3 {
+.page1 h3,
+.page2 h3 {
+
     font-size: 60px;
     border: solid 1px #1f4148;
     border-radius: 5rem;
@@ -78,13 +98,21 @@ margin-left: 10px}
     transition: transform 0.15s, opacity 0.15s;
 }
 
-.page1:hover, .page2:hover {
+.page1:hover,
+.page2:hover {
     transform: translateY(-2px);
     opacity: 0.8;
 }
 
-.page1 a { color: #181811; }
-.page2 a { color: #161610; }
+.page1 a {
+    color: #181811;
+    text-decoration: none;
+}
+
+.page2 a {
+    color: #161610;
+    text-decoration: none;
+}
 
 a:hover {
     opacity: 0.5;
