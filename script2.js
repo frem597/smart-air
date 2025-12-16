@@ -15,11 +15,14 @@ function tempUp() {
   fetch(db + "control/temp.json")
     .then(res => res.json())
     .then(temp => {
-      temp = (temp ?? 25) + 1;
+      temp = (temp ?? 25) + 1;   // โค้ดเดิม
+      if (temp > 30) temp = 30; // 🔹 แทรก: จำกัดค่าสูงสุด
+
       fetch(db + "control/temp.json", {
         method: "PUT",
         body: JSON.stringify(temp)
       });
+
       document.getElementById("tempValue").innerText = temp;
     });
 }
@@ -29,11 +32,14 @@ function tempDown() {
   fetch(db + "control/temp.json")
     .then(res => res.json())
     .then(temp => {
-      temp = (temp ?? 25) - 1;
+      temp = (temp ?? 25) - 1;   // โค้ดเดิม
+      if (temp < 16) temp = 16; // 🔹 แทรก: จำกัดค่าต่ำสุด
+
       fetch(db + "control/temp.json", {
         method: "PUT",
         body: JSON.stringify(temp)
       });
+
       document.getElementById("tempValue").innerText = temp;
     });
 }
