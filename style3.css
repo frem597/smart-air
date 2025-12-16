@@ -1,123 +1,92 @@
-    * {
+* {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-        box-sizing: border-box;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
+html, body {
+    height: 100%;
+    width: 100%;
+    background: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;   /* 🔴 เปลี่ยนจาก center */
+    text-align: center;
+    color: white;
+}
 
-    body {
+/* ===== CARD ===== */
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 0;          /* 🔴 เต็มจอ ไม่โค้ง */
+    width: 100vw;              /* 🔴 เต็มความกว้าง */
+    height: 100vh;             /* 🔴 เต็มความสูง */
+    display: flex;
+    flex-direction: column;
+    box-shadow: none;          /* 🔴 เหมือนแอป */
+}
 
-        margin-top: 180px;
-        font-family: Arial, sans-serif;
-        background: #0f172a;
-        color: white;
-        display: flex;
-        text-align: center;
-        justify-content: center;
+/* ===== TITLE ===== */
+h1 {
+    font-size: 8rem;
+    color: #bca9bb;
+    margin: 40px 0 20px;
+    margin-top: 90px;
+}
 
-    }
+/* ===== CONTENT ===== */
+.value {
+    
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
 
-    .card {
-        background: #1e293b;
-        padding: 35px;
-        border-radius: 15px;
-        width: 300px;
-        justify-content: center;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 
-    }
+.TEMP {
+    margin-left: -60px;
+    color: #1d9be9;
+    font-size: 80px;
+}
 
-    h1 {
+.voltage { color: #e61212; font-size: 80px;
+margin-left: 30px; }
+.amp     { color: #e08c16; font-size: 80px; 
+margin-left: 30px;}
+.watt    { color: #edde15; font-size: 80px; 
+margin-left: 10px}
 
-        margin-bottom: 30px;
-        border-radius: 10px;
-        margin-top: -10px;
-        color: #bca9bb;
-    }
+/* ===== FOOTER ===== */
+.blog-page {
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;          /* 🔴 ดันลงล่างสุด */
+    padding-bottom: 50px;
+}
 
-    .value {
-        margin-left: -160px;
-    }
+.page1 h3, .page2 h3 {
+    font-size: 60px;
+    border: solid 1px #1f4148;
+    border-radius: 5rem;
+    padding: 70px;
+    background: linear-gradient(135deg, #1e38cc, #4f2b89);
+    box-shadow: 0 8px 20px rgba(14, 165, 233, 0.4);
+    transition: transform 0.15s, opacity 0.15s;
+}
 
-    .voltage h2 {
-        margin-left: 50px;
-    }
+.page1:hover, .page2:hover {
+    transform: translateY(-2px);
+    opacity: 0.8;
+}
 
-    .amp h2 {
-        margin-left: 50px;
-    }
+.page1 a { color: #181811; }
+.page2 a { color: #161610; }
 
-    .watt {
-        margin-left: 47px;
-    }
-
-    a:hover {
-        opacity: 0.5;
-    }
-
-    .blog-page {
-        position: relative;
-        top: 20px;
-        display: flex;
-        justify-content: space-between;
-
-    }
-
-    a {
-        text-decoration: none;
-        color: #406783;
-    }
-
-    .page1 h3 {
-        border: solid 1px #1f4148;
-        border-radius: 1rem;
-        padding: 8px;
-        background-color: #4283a1;
-        background: linear-gradient(135deg, #1e38cc, #4f2b89);
-        box-shadow: 0 8px 20px rgba(14, 165, 233, 0.4);
-        transition: transform 0.15s, opacity 0.15s;
-    }
-
-    .page2 h3 {
-        border: solid 1px #1f4148;
-        border-radius: 1rem;
-        padding: 8px;
-        background-color: #4283a1;
-        background: linear-gradient(135deg, #1e38cc, #4f2b89);
-        box-shadow: 0 8px 20px rgba(14, 165, 233, 0.4);
-        transition: transform 0.15s, opacity 0.15s;
-    }
-
-    .TEMP {
-        color: #1d9be9;
-        margin-left: 30px;
-    }
-
-    .voltage {
-        color: #e61212;
-    }
-
-    .amp {
-        color: #e08c16;
-    }
-
-    .watt {
-        color: #edde15;
-    }
-
-    .page1 a {
-        color: #181811;
-    }
-
-    .page2 a {
-        color: #161610;
-    }
-
-    .page1:hover,
-    .page2:hover {
-        transform: translateY(-2px)
-    }
-
-    .page1,
-    .page2 {
-        transition: transform 0.15s, opacity 0.15s;
-    }
+a:hover {
+    opacity: 0.5;
+    text-decoration: none;
+}
