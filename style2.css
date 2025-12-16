@@ -31,23 +31,24 @@ h1 {
 
 /* ===== CENTER AREA ===== */
 .blog-bt {
-    flex: 1;                     /* ❗ ให้พื้นที่พอ */
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;     /* กลางแนวตั้ง */
+    justify-content: flex-start; /* ✅ ชิดบน */
     align-items: center;
-    gap: 100px;                   /* ระยะ temp ↔ ปุ่ม */
+    gap: 250px;
 }
+
 
 /* ===== TEMP ===== */
 .temp-line {
+    order: -1;        /* ✅ ขึ้นก่อนปุ่ม */
     font-size: 120px;
     color: #bca9bb;
+    margin-top: 70px; /* ปรับระยะจากหัวข้อ */
+}
 
-}
-.temp-line {
-    margin-top: -100px;
-}
+
 
 
 /* ===== BUTTONS ===== */
